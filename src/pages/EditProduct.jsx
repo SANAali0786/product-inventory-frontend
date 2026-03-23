@@ -18,7 +18,7 @@ const { id } = useParams();
   const token = localStorage.getItem('token');
    axios.get(`${process.env.REACT_APP_API_URL}/api/products/${id}`, {
     headers: { Authorization: `Bearer ${token}` }
-  })
+  }, [id])
   .then(res => {
     setName(res.data.name);
     setPrice(res.data.price);
@@ -27,7 +27,7 @@ const { id } = useParams();
     setDescription(res.data.description);
     setImage(res.data.image)
   })
-}, [id]);
+}, []);
 
 
 
