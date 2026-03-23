@@ -27,7 +27,7 @@ const { id } = useParams();
     setDescription(res.data.description);
     setImage(res.data.image)
   })
-}, []);
+}, [id]);
 
 
 
